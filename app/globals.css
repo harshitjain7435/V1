@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-b from-slate-50 to-white text-gray-900;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  /* Premium button styles */
+  .btn-primary {
+    @apply px-6 py-3 bg-cyan-500 text-white rounded-lg font-semibold transition-all duration-200 focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary:hover {
+    @apply bg-cyan-600 shadow-md;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-cyan-500 text-cyan-500 rounded-lg font-semibold transition-all duration-200 focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2;
+  }
+
+  .btn-outline:hover {
+    @apply bg-cyan-50 shadow-md;
+  }
+
+  /* Enterprise card styling */
+  .card {
+    @apply bg-white border border-gray-100 rounded-lg shadow-sm p-6 transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply shadow-md border-gray-200;
+  }
+
+  /* Premium gradient card with glow */
+  .card-premium {
+    @apply bg-white border border-gray-100 rounded-xl shadow-sm p-8 transition-all duration-300;
+  }
+
+  .card-premium:hover {
+    @apply shadow-lg border-cyan-200 bg-gradient-to-br from-white to-cyan-50;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding-lg {
+    @apply py-24 px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-gray-900/80 backdrop-blur-md border border-white/10;
+  }
+
+  /* Smooth underline animation */
+  .link-underline {
+    @apply relative pb-1 transition-colors duration-200;
+  }
+
+  .link-underline::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-500 transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Glow effect */
+  .glow-cyan {
+    @apply transition-shadow duration-300;
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+  }
+
+  /* Micro-interaction utilities */
+  .hover-lift {
+    @apply transition-transform duration-200;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1;
+  }
+
+  /* Focus states */
+  input:focus,
+  textarea:focus,
+  select:focus {
+    @apply ring-2 ring-cyan-500 ring-offset-2 transition-all duration-200;
+  }
+
+  /* Smooth shadow transitions */
+  .shadow-smooth {
+    @apply shadow-sm transition-shadow duration-300;
+  }
+
+  .shadow-smooth:hover {
+    @apply shadow-md;
+  }
+}
