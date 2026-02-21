@@ -100,10 +100,10 @@ export const SolutionsSection: React.FC = () => {
                 {/* Accent gradient line */}
                 <motion.div
                   className="mt-6 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500"
+                  style={{ transformOrigin: "left" }}
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  origin="left"
                 />
               </Card>
             </motion.div>
