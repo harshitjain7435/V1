@@ -1,34 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  // Detect scroll to change navbar style
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 transition-all duration-300"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
@@ -51,11 +32,7 @@ export const Navbar: React.FC = () => {
               >
                 WM
               </div>*/}
-              <span
-                className={`transition-colors duration-300 ${
-                  isScrolled ? "text-cyan-600" : "text-white"
-                }`}
-              >
+              <span className="text-cyan-600 font-bold">
                 FlexiSpace
               </span>
             </Link>
@@ -69,9 +46,7 @@ export const Navbar: React.FC = () => {
             >
               <Link
                 href="/"
-                className={`font-medium transition-colors duration-300 ${
-                  isScrolled ? "text-gray-700 hover:text-cyan-600" : "text-white hover:text-cyan-200"
-                } link-underline`}
+                className="font-medium text-gray-700 hover:text-cyan-600 transition-colors duration-300 link-underline"
               >
                 Home
               </Link>
@@ -83,11 +58,7 @@ export const Navbar: React.FC = () => {
             >
               <Link
                 href="/enquiry"
-                className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
-                  isScrolled
-                    ? "bg-cyan-500 text-white hover:bg-cyan-600 shadow-md"
-                    : "bg-white/20 text-white hover:bg-white/30 border border-white/30"
-                }`}
+                className="px-6 py-2 rounded-lg font-medium bg-cyan-500 text-white hover:bg-cyan-600 shadow-md transition-all duration-300"
               >
                 Submit Enquiry
               </Link>
@@ -97,11 +68,7 @@ export const Navbar: React.FC = () => {
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2 rounded-lg transition-all duration-300 ${
-              isScrolled
-                ? "hover:bg-gray-100 text-gray-700"
-                : "hover:bg-white/20 text-white"
-            }`}
+            className="md:hidden p-2 rounded-lg transition-all duration-300 hover:bg-gray-100 text-gray-700"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
             whileHover={{ scale: 1.1 }}
@@ -142,21 +109,13 @@ export const Navbar: React.FC = () => {
           <div className="pb-4 space-y-2">
             <Link
               href="/"
-              className={`block px-4 py-2 rounded-lg transition-all duration-300 ${
-                isScrolled
-                  ? "text-gray-700 hover:bg-gray-50"
-                  : "text-white hover:bg-white/10"
-              }`}
+              className="block px-4 py-2 rounded-lg transition-all duration-300 text-gray-700 hover:bg-gray-50"
             >
               Home
             </Link>
             <Link
               href="/enquiry"
-              className={`block px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                isScrolled
-                  ? "bg-cyan-500 text-white hover:bg-cyan-600"
-                  : "bg-white/20 text-white hover:bg-white/30 border border-white/30"
-              }`}
+              className="block px-4 py-2 rounded-lg font-medium transition-all duration-300 bg-cyan-500 text-white hover:bg-cyan-600"
             >
               Submit Enquiry
             </Link>
