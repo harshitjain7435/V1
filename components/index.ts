@@ -16,6 +16,7 @@ export { Spinner } from "./Spinner";
 // Animation Components
 export { AnimatedGrid } from "./AnimatedGrid";
 export { FloatingGlobs } from "./FloatingGlobs";
+export { CinematicBackground } from "./CinematicBackground";
 
 // Layout Components
 export { Navbar } from "./Navbar";

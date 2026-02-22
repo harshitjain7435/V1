@@ -208,7 +208,7 @@ Enquiries are stored in `data/enquiries.json`:
     "companyName": "Acme Corp",
     "contactPerson": "John Doe",
     "email": "john@acme.com",
-    "phone": "+1 (234) 567-890",
+    "phone": "+123456789",
     "requiredLocation": "New York",
     "requiredCapacity": "5000",
     "duration": "short-term",
@@ -377,7 +377,7 @@ npm start
 ### Contact Information
 
 - **Email**: hello@warehousemarketplace.com
-- **Phone**: +1 (234) 567-890
+- **Phone**: +91123456789
 - **Hours**: Mon-Fri 9AM-6PM EST
 
 ### FAQ & Help

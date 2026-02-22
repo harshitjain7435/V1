@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-slate-900 to-gray-950 text-white mt-24">
+    <footer className="bg-gradient-to-b from-slate-900 to-gray-950 text-white mt-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
           className="grid md:grid-cols-4 gap-12 mb-12"
@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
               {/* <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center text-white font-bold shadow-lg">
                 WM
               </div>
-              <span>FlexiSpace</span> */}
+              <span>Xtoreverse</span> */}
             </h3>
             <p className="text-gray-400 text-sm font-light leading-relaxed">
               Enterprise-grade warehouse marketplace connecting businesses with
@@ -107,10 +107,10 @@ export const Footer: React.FC = () => {
                 Email
               </h4>
               <a
-                href="mailto:support@warehousemarketplace.com"
+                href="mailto:support@xtoreverse.com"
                 className="text-gray-300 hover:text-cyan-400 transition-colors text-sm font-light"
               >
-                support@warehousemarketplace.com
+                support@xtoreverse.com
               </a>
             </div>
             <div className="p-4 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
@@ -118,10 +118,10 @@ export const Footer: React.FC = () => {
                 Phone
               </h4>
               <a
-                href="tel:+1234567890"
+                href="tel:+91 97847074543"
                 className="text-gray-300 hover:text-cyan-400 transition-colors text-sm font-light"
               >
-                +1 (234) 567-890
+                +91 97847074543
               </a>
             </div>
             <div className="p-4 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
@@ -129,8 +129,8 @@ export const Footer: React.FC = () => {
                 Address
               </h4>
               <p className="text-gray-300 text-sm font-light">
-                123 Business Street<br />
-                Commerce City, CC 12345
+                403, Grace Chambers, Near Gurudwara, <br/>
+                Chakala, Andheri East, Mumbai
               </p>
             </div>
           </motion.div>
@@ -144,7 +144,7 @@ export const Footer: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p>
-              © {currentYear} FlexiSpace. All rights reserved. | Enterprise
+              © {currentYear} Xtoreverse. All rights reserved. | Enterprise
               Warehouse Marketplace
             </p>
           </motion.div>

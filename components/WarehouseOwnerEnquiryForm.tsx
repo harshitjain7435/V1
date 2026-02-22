@@ -187,7 +187,7 @@ export const WarehouseOwnerEnquiryForm: React.FC<WarehouseOwnerFormProps> = ({
           type="tel"
           value={formData.phone}
           onChange={handleChange}
-          placeholder="+1 (234) 567-890"
+          placeholder="+123456789"
           required
           error={errors.phone}
         />

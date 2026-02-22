@@ -186,7 +186,7 @@ export const CustomerEnquiryForm: React.FC<CustomerFormProps> = ({
           type="tel"
           value={formData.phone}
           onChange={handleChange}
-          placeholder="+1 (234) 567-890"
+          placeholder="+91 97847074543"
           required
           error={errors.phone}
         />

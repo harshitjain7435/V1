@@ -107,10 +107,10 @@ export const EnquiryPage: React.FC = () => {
               <span className="font-semibold text-gray-900">Email:</span>
               <br />
               <a
-                href="mailto:support@warehousemarketplace.com"
+                href="mailto:support@xtoreverse.com"
                 className="text-cyan-500 hover:text-cyan-600 transition-colors font-medium"
               >
-                support@warehousemarketplace.com
+                support@xtoreverse.com
               </a>
             </p>
             <p>
@@ -120,7 +120,7 @@ export const EnquiryPage: React.FC = () => {
                 href="tel:+1234567890"
                 className="text-cyan-500 hover:text-cyan-600 transition-colors font-medium"
               >
-                +1 (234) 567-890
+                +91 97847074543
               </a>
             </p>
             <p>

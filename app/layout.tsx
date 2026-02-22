@@ -12,8 +12,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://warehousemarketplace.com"),
   title: {
-    default: "FlexiSpace | Flexible Warehousing Solutions",
-    template: "%s | FlexiSpace",
+    default: "Xtoreverse | Flexible Warehousing Solutions",
+    template: "%s | Xtoreverse",
   },
   description:
     "Connect with flexible warehousing solutions or monetize your warehouse space. Verified listings, competitive pricing, and quick deployment.",
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     "warehouse rental",
     "warehouse space",
   ],
-  authors: [{ name: "FlexiSpace" }],
-  creator: "FlexiSpace",
+  authors: [{ name: "Xtoreverse" }],
+  creator: "Xtoreverse",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://warehousemarketplace.com",
-    siteName: "FlexiSpace",
-    title: "FlexiSpace | Flexible Warehousing Solutions",
+    siteName: "Xtoreverse",
+    title: "Xtoreverse | Flexible Warehousing Solutions",
     description:
       "Connect with flexible warehousing solutions or monetize your warehouse space.",
     images: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: "https://warehousemarketplace.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "FlexiSpace",
+        alt: "Xtoreverse",
       },
     ],
   },

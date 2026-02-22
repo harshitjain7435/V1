@@ -12,7 +12,7 @@ import {
 
 export const CTASection: React.FC = () => {
   return (
-    <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500 to-blue-600 overflow-hidden">
+    <section className="relative py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500 to-blue-600 overflow-hidden">
       {/* Background accent */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg

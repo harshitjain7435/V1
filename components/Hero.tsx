@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { CinematicBackground } from "./CinematicBackground";
 
 export const Hero: React.FC = () => {
   // Animation variants for refined entrance
@@ -25,31 +26,20 @@ export const Hero: React.FC = () => {
     },
   };
 
-  const statCardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  };
-
   return (
     <>
-      {/* ===== TEXT-FOCUSED ENTERPRISE HERO ===== */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50 to-white min-h-[80vh] flex items-center py-32 md:py-40">
-        {/* ===== SUBTLE ACCENT GLOWS ===== */}
-
-        {/* Cyan accent glow (behind headline) */}
-        <div className="absolute inset-0 flex justify-center pointer-events-none">
-          <div className="absolute top-1/4 w-[600px] h-[600px] bg-cyan-400/10 blur-3xl rounded-full" />
+      {/* ===== CINEMATIC HERO WITH BACKGROUND VIDEO ===== */}
+      <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center">
+        {/* Cinematic background layer */}
+        <div className="absolute inset-0 z-0 w-full h-full">
+          <CinematicBackground />
         </div>
 
-        {/* Blue accent glow (center-right) */}
-        <div className="absolute right-0 top-1/3 w-[500px] h-[500px] bg-blue-500/5 blur-2xl rounded-full pointer-events-none" />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/30 z-5" />
 
         {/* ===== CONTENT LAYER ===== */}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 sm:py-24">
           {/* Clean single-column layout */}
           <motion.div
             className="text-left"
@@ -60,7 +50,7 @@ export const Hero: React.FC = () => {
             {/* ===== ENTERPRISE HEADLINE ===== */}
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-tight"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight"
             >
               Flexible Warehousing.
               <span className="block">Built For Scale.</span>
@@ -69,7 +59,7 @@ export const Hero: React.FC = () => {
             {/* ===== SUBHEADING ===== */}
             <motion.p
               variants={itemVariants}
-              className="text-lg text-gray-600 max-w-2xl mt-6 leading-relaxed font-light"
+              className="text-lg text-gray-100 max-w-2xl mt-6 leading-relaxed font-light"
             >
               Enterprise-grade logistics infrastructure. Connect with verified
               warehouse spaces or monetize your unused capacity.
@@ -87,84 +77,23 @@ export const Hero: React.FC = () => {
                 transition={{ duration: 0.2 }}
               >
                 <Link href="/enquiry">
-                  <button className="w-full sm:w-auto px-8 py-4 text-lg bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                  <button className="w-full sm:w-auto px-8 py-4 text-lg bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black/30">
                     Get Started
                   </button>
                 </Link>
               </motion.div>
 
-              {/* Secondary Button (Blue Outline) */}
+              {/* Secondary Button (White Outline) */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
               >
                 <Link href="/enquiry">
-                  <button className="w-full sm:w-auto px-8 py-4 text-lg bg-white border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                  <button className="w-full sm:w-auto px-8 py-4 text-lg bg-white/10 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black/30">
                     List Your Space
                   </button>
                 </Link>
-              </motion.div>
-            </motion.div>
-
-            {/* ===== STATS SECTION BELOW FOLD ===== */}
-            <motion.div
-              variants={itemVariants}
-              className="mt-20 pt-16 border-t border-gray-200"
-            >
-              <motion.div
-                className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.15,
-                    },
-                  },
-                }}
-              >
-                {/* Stat Card 1 */}
-                <motion.div
-                  variants={statCardVariants}
-                  whileHover={{ y: -4, transition: { duration: 0.3 } }}
-                  className="bg-white border border-gray-200 rounded-xl px-8 py-6 shadow-sm hover:shadow-md transition-all duration-300"
-                >
-                  <div className="text-4xl font-bold text-gray-900 mb-2">
-                    500+
-                  </div>
-                  <p className="text-gray-500 text-sm uppercase tracking-wide font-medium">
-                    Warehouse Spaces
-                  </p>
-                </motion.div>
-
-                {/* Stat Card 2 */}
-                <motion.div
-                  variants={statCardVariants}
-                  whileHover={{ y: -4, transition: { duration: 0.3 } }}
-                  className="bg-white border border-gray-200 rounded-xl px-8 py-6 shadow-sm hover:shadow-md transition-all duration-300"
-                >
-                  <div className="text-4xl font-bold text-gray-900 mb-2">
-                    1000+
-                  </div>
-                  <p className="text-gray-500 text-sm uppercase tracking-wide font-medium">
-                    Happy Customers
-                  </p>
-                </motion.div>
-
-                {/* Stat Card 3 */}
-                <motion.div
-                  variants={statCardVariants}
-                  whileHover={{ y: -4, transition: { duration: 0.3 } }}
-                  className="bg-white border border-gray-200 rounded-xl px-8 py-6 shadow-sm hover:shadow-md transition-all duration-300"
-                >
-                  <div className="text-4xl font-bold text-gray-900 mb-2">
-                    50M+
-                  </div>
-                  <p className="text-gray-500 text-sm uppercase tracking-wide font-medium">
-                    Sq Ft Capacity
-                  </p>
-                </motion.div>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -191,9 +120,6 @@ export const Hero: React.FC = () => {
           </svg>
         </motion.div>
       </section>
-
-      {/* ===== SUBTLE SECTION DIVIDER ===== */}
-      <div className="border-t border-gray-200 bg-gradient-to-b from-white to-gray-50 h-px" />
     </>
   );
 };

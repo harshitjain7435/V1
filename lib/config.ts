@@ -5,21 +5,21 @@
 
 export const siteConfig = {
   // Site Metadata
-  name: "FlexiSpace",
+  name: "Xtoreverse",
   description:
     "Connect with flexible warehousing solutions or monetize your warehouse space",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
 
   // Contact Information
   contact: {
-    email: "hello@flexispace.com",
-    phone: "+1 (234) 567-890",
+    email: "hello@xtoreverse.com",
+    phone: "+91 97847074543",
     hours: "Mon-Fri 9AM-6PM EST",
   },
 
   // Company Information
   company: {
-    name: "FlexiSpace",
+    name: "Xtoreverse",
     address: "123 Business Street, Commerce City, CC 12345",
   },
 

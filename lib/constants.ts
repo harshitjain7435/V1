@@ -91,6 +91,6 @@ export const ROUTES = {
 
 // Meta Tags
 export const META = {
-  SITE_NAME: "FlexiSpace",
-  SITE_URL: "https://flexispace.com",
+  SITE_NAME: "Xtoreverse",
+  SITE_URL: "https://xtoreverse.com",
 } as const;

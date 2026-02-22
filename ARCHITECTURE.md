@@ -244,7 +244,7 @@ warehouse-marketplace/
   "companyName": "Acme Corp",
   "contactPerson": "John Doe",
   "email": "john@acme.com",
-  "phone": "+1 (234) 567-890",
+  "phone": "+123456789",
   "requiredLocation": "New York",
   "requiredCapacity": "5000",
   "duration": "short-term",

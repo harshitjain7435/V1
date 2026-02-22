@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
                 WM
               </div>*/}
               <span className="text-cyan-600 font-bold">
-                FlexiSpace
+                Xtoreverse
               </span>
             </Link>
           </motion.div>
